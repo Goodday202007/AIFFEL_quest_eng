@@ -6,3 +6,9 @@ NLP/NLP03/segments.memmap
 NLP/NLP03/project/enc_tokens.memmap
 NLP/NLP03/project/labels_mlm.memmap
 NLP/NLP03/project/segments.memmap
+NLP/NLP04/.ipynb_checkpoints/
+NLP/NLP04/chatgpt/
+NLP/NLP04/models/
+NLP/NLP04/test/
+NLP/NLP04/transformers/
+
