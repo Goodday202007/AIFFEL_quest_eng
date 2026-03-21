@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG U+ 5G Plan Consultant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="magenta">U+</span> 5G Consultant
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <h1>나에게 딱 맞는<br><span class="gradient-text">프리미엄 5G 요금제</span></h1>
+            <p>그래프 데이터베이스 기반의 지능형 요금 추천 서비스를 경험해보세요.</p>
+        </header>
+
+        <section class="controls glass-panel">
+            <div class="filter-group">
+                <button class="filter-btn active" data-query="all">전체 요금제 보기</button>
+                <button class="filter-btn" data-query="youth">만 34세 이하 혜택</button>
+                <button class="filter-btn" data-query="family">가족 결합 혜택</button>
+            </div>
+        </section>
+
+        <!-- Loader -->
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>데이터를 분석 중입니다...</p>
+        </div>
+
+        <section id="plans-grid" class="plans-grid">
+            <!-- Cards will be injected here -->
+        </section>
+    </main>
+
+    <!-- Modal for details -->
+    <div id="plan-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
