@@ -1,0 +1,49 @@
+.venv 가상환경 설정
+
+# 프로젝트 폴더 생성 및 이동
+
+# 가상환경 생성
+python -m venv .venv_af1
+
+# 가상환경 삭제
+Remove-Item -Recurse -Force .venv_af1
+
+# 가상환경 활성화
+# Windows (PowerShell)
+
+.venv_af2\Scripts\Activate.ps1
+
+# Windows (Command Prompt)
+.venv_af2\Scripts\activate
+
+
+# 환경 확인
+
+(.venv) $ python --version
+Python 3.11.5
+
+(.venv) $ where python           # Windows
+C:\Users\yourname\model-serving-course\.venv\Scripts\python.exe
+
+이제 이 터미널에서 pip install을 하면, 전역이 아니라 .venv 안에만 패키지가 설치됩니다.
+
+# 정책 error 시
+윈도우 파워쉘에는 스크립트 실행 방지 정책이 존재합니다. 에러를 겪으신다면 아래 명령어를 입력하세요
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+# 가상환경 비활성화
+(.venv) $ deactivate
+
+# 주피터 커널로 등록
+pip install ipykernel jupyter
+python -m ipykernel install --user --name=venv_af1 --display-name="venv_af1"
+
+# 커널 리스트 확인
+jupyter kernelspec list
+
+# 커널 삭제
+jupyter kernelspec uninstall venv-af1
+
+
